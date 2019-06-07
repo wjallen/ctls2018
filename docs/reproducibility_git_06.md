@@ -35,15 +35,15 @@ $ git init
 ```
 
 If you remember back to the earlier lesson where we added and
-committed our earlier work on `transcriptome.txt`, we had a diagram of the local repository
+committed our earlier work on `notes.txt`, we had a diagram of the local repository
 which looked like this:
 
 ![The Local Repository with Git Staging Area](./fig/git-staging-area.svg)
 
 Now we have two repositories: the local repository resembles the diagram above, and the repository of the same name hosted on the GitHub servers is completely empty.
 
-Note that our local repository still contains our earlier work on `transcriptome.txt`, but the
-remote repository on GitHub doesn't contain any memory of `transcriptome.txt` yet.
+Note that our local repository still contains our earlier work on `notes.txt`, but the
+remote repository on GitHub doesn't contain any memory of `notes.txt` yet.
 
 The next step is to connect the two repositories.  We do this by making the
 GitHub repository a "remote" for the local repository.
