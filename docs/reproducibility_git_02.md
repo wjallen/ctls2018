@@ -37,17 +37,10 @@ $ ssh username@training01.tacc.utexas.edu
 (enter password)
 (enter token)
 
+$ which git
+/usr/bin/git
 $ git --version
 git version 1.8.3.1
-```
-
-This is a rather old version of git, so let's use containers to update it:
-
-```
-$ docker pull alpine/git  # this is done, no need to repeat
-$ alias git="docker run -ti --rm --env COLUMNS=`tput cols` --env LINES=`tput lines` -v $(pwd):/git -v $HOME/.ssh:/root/.ssh alpine/git"
-$ git --version
-git version 2.20.1
 ```
 
 When we use Git on a new computer for the first time,

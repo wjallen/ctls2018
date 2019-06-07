@@ -154,7 +154,7 @@ Now in VIM:
 (add this new text at the bottom:)
 
 Part 2: Create a new repository from the command line
-* use git init ./ to initialize a new repository
+* use git init to initialize a new repository
 
 (press Esc then :wq to save and quit)
 ```
@@ -222,7 +222,7 @@ If we break it down into pieces:
 4.  The remaining lines are the most interesting, they show us the actual differences
     and the lines on which they occur.
     In particular,
-    the `+` marker in the first column shows where we added a line.
+    the `+` marker in the first column shows where we added lines.
 
 After reviewing our change, it's time to commit it:
 
@@ -314,7 +314,7 @@ index fe7c565..61f7805 100644
 ```
 
 So far, so good:
-we've added one line to the end of the file
+we've added a few lines to the end of the file
 (shown with a `+` in the first column).
 Now let's put that change in the staging area
 and see what `git diff` reports:
@@ -411,7 +411,7 @@ $ git add <directory-with-files>
 
 ### Exercise
 
-Here is the next section that we will cover, add it to notes.txt:
+Here is the next section that we will cover, add it to `notes.txt`:
 ```
 Part 4: Exploring history
 ```

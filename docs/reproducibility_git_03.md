@@ -16,7 +16,7 @@ Initialized empty Git repository in /home/wallen/my_first_repo/.git/
 ```
 
 
-If we use `ls -la`, we can see that Git has created a hidden directory within `my_first_repo` called `.git`:
+If we use `ls -a`, we can see that Git has created a hidden directory within `my_first_repo` called `.git`:
 
 ```
 $ ls -a

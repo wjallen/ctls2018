@@ -9,7 +9,7 @@ progress by looking, so let's do that using our `HEAD`s.  Before we start,
 let's make a change to `notes.txt`.
 
 ```
-$ echo "Part 5 will be about linking your local repository with github" >> notes.txt
+$ echo "Part 5 will link your local repository with github" >> notes.txt
 $ cat notes.txt
 Part 1: The Basics of Git
 * Git is used for version control
@@ -21,7 +21,7 @@ Part 3: Tracking changes with git
 * this is what we are working on now
 
 Part 4: Exploring history
-Part 5 will be about linking your local repository with github
+Part 5 will link your local repository with github
 ```
 
 Now, let's see what we get.
@@ -36,7 +36,7 @@ index c876e8d..a4a265a 100644
  * this is what we are working on now
 
  Part 4: Exploring history
-+Part 5 will be about linking your local repository with github
++Part 5 will link your local repository with github
 ```
 
 Which is the same as what you would get if you leave out `HEAD` (try it).  The
@@ -55,7 +55,7 @@ index 61f7805..a4a265a 100644
  * this is what we are working on now
 +
 +Part 4: Exploring history
-+Part 5 will be about linking your local repository with github
++Part 5 will link your local repository with github
 ```
 
 If we want to see the differences between older commits we can use `git diff`
@@ -76,7 +76,7 @@ index fe7c565..a4a265a 100644
 +* this is what we are working on now
 +
 +Part 4: Exploring history
-+Part 5 will be about linking your local repository with github
++Part 5 will link your local repository with github
 ```
 
 ### More Detailed Histories
@@ -139,7 +139,7 @@ index fe7c565..a4a265a 100644
 +* this is what we are working on now
 +
 +Part 4: Exploring history
-+Part 5 will be about linking your local repository with github
++Part 5 will link your local repository with github
 ```
 
 That's the right answer,
@@ -161,7 +161,7 @@ index fe7c565..a4a265a 100644
 +* this is what we are working on now
 +
 +Part 4: Exploring history
-+Part 5 will be about linking your local repository with github
++Part 5 will link your local repository with github
 ```
 
 ### Restoring Old Versions of Files
@@ -268,7 +268,7 @@ moving backward and forward in time becomes much easier.
 
 ### Exercise
 
-Charlie has made changes to the Python script that he has been working on for weeks, and the
+Joe has made changes to the Python script that he has been working on for weeks, and the
 modifications he made this morning "broke" the script and it no longer runs. He has spent
 ~ 1hr trying to fix it, with no luck...
 
