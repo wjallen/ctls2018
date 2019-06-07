@@ -1,7 +1,7 @@
 ## Create a New Repository on the Command Line
 
 
-First, let's create a new folder in our `$HOME` directory on Stampede2 to organize our work:
+First, let's create a new folder in our `$HOME` directory on `training01` to organize our work:
 
 ```
 $ cd ~/
@@ -12,7 +12,7 @@ $ cd my_first_repo/       # currently empty
 Then we will use a Git command to initialize this directory as a new Git repository - or a place where Git can start to organize versions of our files.
 ```
 $ git init
-Initialized empty Git repository in /home1/03439/wallen/my_first_repo/.git/
+Initialized empty Git repository in /home/wallen/my_first_repo/.git/
 ```
 
 
@@ -23,35 +23,33 @@ $ ls -a
 ./  ../  .git/
 ```
 
-Use the `tree` command to get a clearer view of the contents of the `.git/` directory:
+Use the `find` command to get a overview of the contents of the `.git/` directory:
 
 ```
-$ tree .git/
+$ find .git/
 .git/
-├── branches
-├── config
-├── description
-├── HEAD
-├── hooks
-│   ├── applypatch-msg.sample
-│   ├── commit-msg.sample
-│   ├── post-update.sample
-│   ├── pre-applypatch.sample
-│   ├── pre-commit.sample
-│   ├── prepare-commit-msg.sample
-│   ├── pre-push.sample
-│   ├── pre-rebase.sample
-│   └── update.sample
-├── info
-│   └── exclude
-├── objects
-│   ├── info
-│   └── pack
-└── refs
-    ├── heads
-    └── tags
-
-9 directories, 13 files
+.git/refs
+.git/refs/heads
+.git/refs/tags
+.git/branches
+.git/description
+.git/hooks
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/update.sample
+.git/info
+.git/info/exclude
+.git/HEAD
+.git/config
+.git/objects
+.git/objects/pack
+.git/objects/info
 ```
 
 Git uses this special sub-directory to store all the information about the project,
@@ -77,4 +75,4 @@ wording of the output might be slightly different.
 1. Explore the files and folders in the `.git/` directory
 2. Can you find a file with your name and e-mail in it? How did it get there?
 
-Previous: [The Basics of Git](reproducibility_git_02.md) | Next: [Tracking Changes](reproducibility_git_04.md) | Top: [Course Overview](../../index.md)
+Previous: [The Basics of Git](reproducibility_git_02.md) | Next: [Tracking Changes](reproducibility_git_04.md) | Top: [Course Overview](../index.md)

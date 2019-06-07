@@ -30,21 +30,24 @@ across different computers, facilitating collaboration among different people.
 
 ### Setting up Git
 
-Log on to Stampede2, load the Git module, check which version of Git is in your `PATH`.
+Log on to `training01`, and check which version of Git is in your `PATH`.
 
 ```
-$ ssh username@stampede2.tacc.utexas.edu
+$ ssh username@training01.tacc.utexas.edu
 (enter password)
 (enter token)
 
-$ module list
-
-Currently Loaded Modules:
-  1) intel/17.0.4   2) impi/17.0.3   3) git/2.9.0   4) autotools/1.1
-  5) python/2.7.13   6) xalt/2.0.7   7) TACC
-
 $ git --version
-git version 2.9.0
+git version 1.8.3.1
+```
+
+This is a rather old version of git, so let's use containers to update it:
+
+```
+$ docker pull alpine/git  # this is done, no need to repeat
+$ alias git="docker run -ti --rm --env COLUMNS=`tput cols` --env LINES=`tput lines` -v $(pwd):/git -v $HOME/.ssh:/root/.ssh alpine/git"
+$ git --version
+git version 2.20.1
 ```
 
 When we use Git on a new computer for the first time,

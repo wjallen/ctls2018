@@ -1,33 +1,35 @@
 ## Tracking Changes
 
-We will use this repository to track a simple version of our [transcriptome analysis pipeline](https://jamescarson3.github.io/ctls2018/docs/LSworflow2_JWS.html).
-Create a new file called `transcriptome.txt` in your repo:
+We will use this repository to record notes from the version control module.
+Create a new file called `notes.txt` in your repo:
 
 ```
 $ pwd
-/home1/03439/wallen/my_first_repo
-$ touch transcriptome.txt
+/home/wallen/my_first_repo
+$ touch notes.txt
 $ ls
-transcriptome.txt
+notes.txt
 ```
 
 Open the file with VIM and enter the following text:
 
 ```
-$ vim transcriptome.txt
+$ vim notes.txt
 ```
 
 Now in VIM:
 ```
 (press 'i' to enter insert mode)
 
-Step 1: Map reads with tophat
+Part 1: The Basics of Git
+* Git is used for version control
 
 (press Esc then :wq to save and quit)
 ```
 ```
-$ cat transcriptome.txt
-Step 1: Map reads with tophat
+$ cat notes.txt
+Part 1: The Basics of Git
+* Git is used for version control
 ```
 
 ### Start Tracking a New File
@@ -44,7 +46,7 @@ Initial commit
 Untracked files:
    (use "git add <file>..." to include in what will be committed)
 
-	transcriptome.txt
+	notes.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -54,7 +56,7 @@ that Git isn't keeping track of.
 We can tell Git to track a file using `git add`:
 
 ```
-$ git add transcriptome.txt
+$ git add notes.txt
 ```
 
 And then check for the expected behavior:
@@ -68,20 +70,20 @@ Initial commit
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   transcriptome.txt
+	new file:   notes.txt
 ```
 ### Commit Changes to the Repo
 
-Git now knows that it's supposed to keep track of `transcriptome.txt`,
+Git now knows that it's supposed to keep track of `notes.txt`,
 but it hasn't recorded these changes as a commit yet.
 To get it to do that,
 we need to run one more command:
 
 ```
-$ git commit -m "Started notes on transcriptome analysis"
-[master (root-commit) 39e316e] Started notes on transcriptome analysis
+$ git commit -m "Started notes for the version control module"
+[master (root-commit) 39e316e] Started notes for the version control module
  1 file changed, 1 insertion(+)
- create mode 100644 transcriptome.txt
+ create mode 100644 notes.txt
 ```
 
 
@@ -119,7 +121,7 @@ commit 39e316e4afe33957495a328750c72834551bd9f1
 Author: Joe Allen <wallen@tacc.utexas.edu>
 Date:   Fri Jul 13 10:49:08 2018 -0500
 
-    Started notes on transcriptome analysis
+    Started notes for the version control module
 ```
 
 `git log` lists all commits  made to a repository in reverse chronological order.
@@ -139,24 +141,30 @@ and the log message Git was given when the commit was created.
 
 ### Making Further Changes
 
-Now suppose we add more information to the file. Edit the file with `VIM` to add Step 2 of transcriptome analysis:
+Now suppose we add more information to the file. Edit the file with `VIM` to add Part 2 of the notes:
 
 ```
-$ vim transcriptome.txt
+$ vim notes.txt
 ```
 
 Now in VIM:
 ```
 (press 'i' to enter insert mode)
 
-Step 2: Assemble transcripts with cufflinks
+(add this new text at the bottom:)
+
+Part 2: Create a new repository from the command line
+* use git init ./ to initialize a new repository
 
 (press Esc then :wq to save and quit)
 ```
 ```
-$ cat transcriptome.txt
-Step 1: Map reads with tophat
-Step 2: Assemble transcripts with cufflinks
+$ cat notes.txt
+Part 1: The Basics of Git
+* Git is used for version control
+
+Part 2: Create a new repository from the command line
+* use git init ./ to initialize a new repository
 ```
 
 When we run `git status` now,
@@ -169,7 +177,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   transcriptome.txt
+	modified:   notes.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -188,13 +196,16 @@ of the file and the most recently saved version:
 
 ```
 $ git diff
-diff --git a/transcriptome.txt b/transcriptome.txt
+diff --git a/notes.txt b/notes.txt
 index 0495f06..dc3ae88 100644
---- a/transcriptome.txt
-+++ b/transcriptome.txt
-@@ -1 +1,2 @@
- Step 1: Map reads with tophat
-+Step 2: Assemble transcripts with cufflinks
+--- a/notes.txt
++++ b/notes.txt
+@@ -1,2 +1,5 @@
+Part 1: The Basics of Git
+* Git is used for version control
++
++Part 2: Create a new repository from the command line
++* use git init ./ to initialize a new repository
 ```
 
 The output is cryptic because
@@ -216,10 +227,10 @@ If we break it down into pieces:
 After reviewing our change, it's time to commit it:
 
 ```
-$ git add transcriptome.txt
-$ git commit -m "Added step 2 to transcriptome analysis"
-[master cfe5306] Added step 2 to transcriptome analysis
- 1 file changed, 1 insertion(+)
+$ git add notes.txt
+$ git commit -m "Added part 2 to version control notes"
+[master cfe5306] Added part 2 to version control notes
+ 1 file changed, 3 insertion(+)
 $ git status
 On branch master
 nothing to commit, working directory clean
@@ -260,35 +271,46 @@ First,
 we'll add another line to the file:
 
 ```
-$ vim transcriptome.txt
+$ vim notes.txt
 ```
 
 Now in VIM:
 ```
 (press 'i' to enter insert mode)
 
-Step 3-4: Final transcriptome assembly with cuffmerge
+(add this new text at the bottom:)
+
+Part 3: Tracking changes with git
+* this is what we are working on now
 
 (press Esc then :wq to save and quit)
 ```
 ```
-$ cat transcriptome.txt
-Step 1: Map reads with tophat
-Step 2: Assemble transcripts with cufflinks
-Step 3-4: Final transcriptome assembly with cuffmerge
+$ cat notes.txt
+Part 1: The Basics of Git
+* Git is used for version control
+
+Part 2: Create a new repository from the command line
+* use git init ./ to initialize a new repository
+
+Part 3: Tracking changes with git
+* this is what we are working on now
 ```
 
 Now check the changes:
 ```
 $ git diff
-diff --git a/transcriptome.txt b/transcriptome.txt
+diff --git a/notes.txt b/notes.txt
 index fe7c565..61f7805 100644
---- a/transcriptome.txt
-+++ b/transcriptome.txt
-@@ -1,2 +1,3 @@
- Step 1: Map reads with tophat
- Step 2: Assemble transcripts with cufflinks
-+Step 3-4: Final transcriptome assembly with cuffmerge
+--- a/notes.txt
++++ b/notes.txt
+@@ -3,3 +3,6 @@ Part 1: The Basics of Git
+
+ Part 2: Create a new repository from the command line
+ * use git init ./ to initialize a new repository
++
++Part 3: Tracking changes with git
++* this is what we are working on now
 ```
 
 So far, so good:
@@ -298,7 +320,7 @@ Now let's put that change in the staging area
 and see what `git diff` reports:
 
 ```
-$ git add transcriptome.txt
+$ git add notes.txt
 $ git diff
 ```
 
@@ -311,14 +333,17 @@ if we do this:
 
 ```
 $ git diff --staged
-diff --git a/transcriptome.txt b/transcriptome.txt
+diff --git a/notes.txt b/notes.txt
 index fe7c565..61f7805 100644
---- a/transcriptome.txt
-+++ b/transcriptome.txt
-@@ -1,2 +1,3 @@
- Step 1: Map reads with tophat
- Step 2: Assemble transcripts with cufflinks
-+Step 3-4: Final transcriptome assembly with cuffmerge
+--- a/notes.txt
++++ b/notes.txt
+@@ -3,3 +3,6 @@ Part 1: The Basics of Git
+
+ Part 2: Create a new repository from the command line
+ * use git init ./ to initialize a new repository
++
++Part 3: Tracking changes with git
++* this is what we are working on now
 ```
 
 It shows us the difference between
@@ -327,9 +352,9 @@ and what's in the staging area.
 Let's save our changes:
 
 ```
-$ git commit -m "Added steps 3-4 to transcriptome analysis"
-[master 53baf60] Added steps 3-4 to transcriptome analysis
- 1 file changed, 1 insertion(+)
+$ git commit -m "Started adding instructions for part 3"
+[master 53baf60] Started adding instructions for part 3
+ 1 file changed, 3 insertion(+)
 ```
 
 Check our status:
@@ -347,19 +372,19 @@ commit 53baf60a5ddeb490f8ed0542458abb7e850048e9
 Author: William Allen <wallen@tacc.utexas.edu>
 Date:   Fri Jul 13 11:15:04 2018 -0500
 
-    Added steps 3-4 to transcriptome analysis
+    Started adding instructions for part 3
 
 commit cfe53067828d2e7232503e4dfec43d9ac20e6cfb
 Author: William Allen <wallen@tacc.utexas.edu>
 Date:   Fri Jul 13 10:59:46 2018 -0500
 
-    Added step 2 to transcriptome analysis
+    Added part 2 to version control notes
 
 commit 39e316e4afe33957495a328750c72834551bd9f1
 Author: William Allen <wallen@tacc.utexas.edu>
 Date:   Fri Jul 13 10:49:08 2018 -0500
 
-    Started notes on transcriptome analysis
+    Started notes for the version control module
 ```
 
 ### Note on Directories
@@ -386,16 +411,15 @@ $ git add <directory-with-files>
 
 ### Exercise
 
-Here are the last two steps of transcriptome analysis:
+Here is the next section that we will cover, add it to notes.txt:
 ```
-Step 5: Compute differential expression with cuffdiff
-Step 6-18: Plot expression data with cummerbund
+Part 4: Exploring history
 ```
 
-1. Add the rest of the steps of transcriptome analysis to your text file
+1. Add this next section to your text file using VIM
 2. Add the modified file to the staging area
 3. Commit the modifications
 4. Browse the `.git/` folder to find where commits are located
 
 
-Previous: [Create a New Repository](reproducibility_git_03.md) | Next: [Exploring History](reproducibility_git_05.md) | Top: [Course Overview](../../index.md)
+Previous: [Create a New Repository](reproducibility_git_03.md) | Next: [Exploring History](reproducibility_git_05.md) | Top: [Course Overview](../index.md)

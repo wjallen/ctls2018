@@ -1,7 +1,7 @@
-# Version Control with Git 
+# Version Control with Git
 
 ### View in github.io here:
-[Course Materials](https://wjallen.github.io/ctls2018)
+https://wjallen.github.io/version-control-git
 
 
 
@@ -12,4 +12,4 @@ This started as a fork of Computational Techniques for Life Sciences 2018:
 https://www.tacc.utexas.edu/education/institutes/computational-techniques-for-life-sciences
 
 ### Materials
-[Course Materials](https://jamescarson3.github.io/ctls2018)
+https://jamescarson3.github.io/ctls2018

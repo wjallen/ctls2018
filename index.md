@@ -2,7 +2,7 @@
 
 ### Module Learning Objectives
 
-This module will be fully interactive. Participants are **strongly encouraged** to follow along on the command line. Access to a training VM and a [GitHub account](https://github.com/join) are required. After completing this module, participants should be able to:
+This module will be fully interactive. Participants are **strongly encouraged** to follow along on the command line. Access to a TACC Training VM and a [GitHub account](https://github.com/join) are required. After completing this module, participants should be able to:
 
  * Describe the importance of reproducibility in Domain Sciences
  * Create a new Git repository hosted on GitHub
@@ -43,7 +43,7 @@ What must be known to reproduce an experiment in computational sciences?
 **Version control** can be considered the "lab notebook of the digital world". Version control systems are a set of tools used to track and manage changes in digital information. A form of version control you are probably already familiar with is "Track Changes" feature in Microsoft Word. It is useful for some applications, but long-term provenance is difficult.
 
 
-<center><img src="./fig/sophistication.png" style="height:200px;"></center>
+<center><img src="./docs/fig/sophistication.png" style="height:200px;"></center>
 
 
 In this workshop, we will look at the version control system **Git**. Of the several version control systems available (Git, Subversion, CVS, Mercurial), our group mostly uses Git, and we generally find that it is:
