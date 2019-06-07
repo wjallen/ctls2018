@@ -1,7 +1,15 @@
-# Computational Techniques for Life Sciences 2018
+# Version Control with Git 
+
+### View in github.io here:
+[Course Materials](https://wjallen.github.io/ctls2018)
+
+
+
+<br><br>
+This started as a fork of Computational Techniques for Life Sciences 2018:
 
 ### Website
 https://www.tacc.utexas.edu/education/institutes/computational-techniques-for-life-sciences
 
 ### Materials
-[Course Material](https://jamescarson3.github.io/ctls2018)
+[Course Materials](https://jamescarson3.github.io/ctls2018)
