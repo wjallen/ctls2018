@@ -76,4 +76,4 @@ in the future will include this information.
 
 A key benefit of Git is that it is platform agnostic. You can use it equally to interact with the same files from your laptop, from a lab computer, or from a cluster. Although we will not be using Git on our laptops in this workshop, instructions to install Git locally can be found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-Previous: [Version Control](reproducibility_git_01.md) | Next: [Create a New Repository](reproducibility_git_03.md) | Top: [Course Overview](../../index.md)
+Next: [Create a New Repository](reproducibility_git_03.md) | Top: [Course Overview](../index.md)

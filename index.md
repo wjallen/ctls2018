@@ -2,9 +2,9 @@
 
 ### Module Learning Objectives
 
-This module will be fully interactive. Participants are **strongly encouraged** to follow along on the command line. Access to Stampede2 and a [GitHub account](https://github.com/join) are required. After completing this module, participants should be able to:
+This module will be fully interactive. Participants are **strongly encouraged** to follow along on the command line. Access to a training VM and a [GitHub account](https://github.com/join) are required. After completing this module, participants should be able to:
 
- * Describe the importance of reproducibility in Life Sciences
+ * Describe the importance of reproducibility in Domain Sciences
  * Create a new Git repository hosted on GitHub
  * Clone a repository, commit and push changes to the repository
  * Track the history of changes in files in a Git repository
@@ -14,7 +14,7 @@ This module will be fully interactive. Participants are **strongly encouraged** 
 
 ### Why is Reproducibility Important?
 
-Reproducibility gives validity to science. To present a scientific result as valid, the assumption must be that if you or any other person reruns the same experiments under the same conditions, they will arrive at the same result. Without this assumption, results become more or less an observational data point. In order to reproduce / replicate a typical wet-lab life sciences experiment, you may need to know:
+Reproducibility gives validity to science. To present a scientific result as valid, the assumption must be that if you or any other person reruns the same experiments under the same conditions, they will arrive at the same result. Without this assumption, results become more or less an observational data point. In order to reproduce / replicate a typical wet-lab science experiment, you may need to know:
 
  * Experimental conditions
  * Reagent(s) used
@@ -27,14 +27,14 @@ Reproducibility gives validity to science. To present a scientific result as val
 
 What must be known to reproduce an experiment in computational sciences?
 
- * Data 
+ * Input / reference data
  * Software identity
  * Software version
  * Number of replicas
  * Parameters
  * Configurations
  * When something was run
- * Code
+ * Exact version of code used
  * Platform / OS
 
 
